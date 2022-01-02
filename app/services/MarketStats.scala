@@ -20,7 +20,7 @@ object MarketStats {
     //scala.io.Source.fromURL("https://api.kuna.io/v3/tickers?symbols=btcuah").mkString
     val getRequest = HttpRequest(
       method = HttpMethods.GET,
-      uri = "https://api.kuna.io/v3/tickers?symbols=btcuah"
+      uri = "https://api.kuna.io/v3/tickers?symbols=ALL"
     )
 
     val responseFuture: Future[HttpResponse] = Http(system = system).singleRequest(getRequest)
